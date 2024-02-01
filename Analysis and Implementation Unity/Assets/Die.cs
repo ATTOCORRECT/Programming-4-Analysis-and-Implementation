@@ -1,6 +1,6 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-
+using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
@@ -16,7 +16,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			EndAction(true);
+			Vector3 randomTilt = new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
+			agent.transform.eulerAngles = randomTilt;
 		}
 
 		//Called once per frame while the action is active.

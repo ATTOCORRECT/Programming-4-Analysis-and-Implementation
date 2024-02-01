@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2225686539149573366}
   - component: {fileID: 1240362247261330664}
   - component: {fileID: 5705482617043090636}
+  - component: {fileID: 8320941826777207590}
   m_Layer: 0
   m_Name: MrAnxiety
   m_TagString: Untagged
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.TurnGreen"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":481.0,"y":274.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.TurnYellow"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Uncomfortable","_position":{"x":683.0,"y":403.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.TurnRed"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Anxious","_position":{"x":482.0,"y":546.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Dead","_position":{"x":271.0,"y":406.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CanSeeAgent"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CanSeeAgent"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.AgentSeesMe"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.AgentSeesMe"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.TurnGreen"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":351.0,"y":219.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.TurnYellow"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Uncomfortable","_position":{"x":768.0,"y":378.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.TurnRed"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Anxious","_position":{"x":565.0,"y":557.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.Die"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Dead","_position":{"x":198.0,"y":385.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CanSeeAgent"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"conditions":[{"$type":"NodeCanvas.Tasks.Conditions.CanSeeAgent"},{"$type":"NodeCanvas.Tasks.Conditions.AgentSeesMe"}],"$type":"NodeCanvas.Framework.ConditionList"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CanSeeAgent"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"conditions":[{"$type":"NodeCanvas.Tasks.Conditions.AgentSeesMe"},{"$type":"NodeCanvas.Tasks.Conditions.CanSeeAgent"}],"$type":"NodeCanvas.Framework.ConditionList"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.TimePassed"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.AgentSeesMe"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CanSeeAgent"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.29
@@ -183,3 +184,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewDistance: 5
   viewAngle: 90
+--- !u!54 &8320941826777207590
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3078709356291273663}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
