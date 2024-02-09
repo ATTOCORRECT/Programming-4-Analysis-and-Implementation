@@ -16,7 +16,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			Vector3 randomTilt = new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
+			Vector3 randomTilt = new Vector3(Random.Range(-15f, 15f), 0, Random.Range(-15f, 15f));
 			agent.transform.eulerAngles = randomTilt;
 		}
 

@@ -17,20 +17,20 @@ public class VisionCone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        canSeeAgents = false;
+        canSeeAgents = false; // reset value
         Vector3 myPosition = transform.position;
-        hitColliders = Physics.OverlapSphere(myPosition, viewDistance);
+        hitColliders = Physics.OverlapSphere(myPosition, viewDistance); // get all objects within view distance
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].gameObject != gameObject)
+            if (hitColliders[i].gameObject != gameObject) // make sure not to count myself
             {
                 Vector3 directionToAgent = hitColliders[i].transform.position - myPosition;
-                if (Vector3.Angle(transform.forward, directionToAgent) < viewAngle / 2)
+                if (Vector3.Angle(transform.forward, directionToAgent) < viewAngle / 2) // check if angle to objects is within view angle
                 {
-
+                    // object seen!
                     Debug.DrawRay(myPosition, directionToAgent);
                     canSeeAgents = true;
-                    VisionManager.Instance.AgentsBeingSeen.Add(hitColliders[i].gameObject);
+                    VisionManager.Instance.AgentsBeingSeen.Add(hitColliders[i].gameObject); // add to seen objects list
                 }
             }
         }
