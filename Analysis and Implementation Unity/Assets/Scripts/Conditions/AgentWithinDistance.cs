@@ -1,6 +1,6 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-
+using UnityEngine;
 
 namespace NodeCanvas.Tasks.Conditions {
 
@@ -26,7 +26,16 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-			return true;
+            Vector3 myPosition = agent.transform.position;
+            Collider[] hitColliders = Physics.OverlapSphere(myPosition, radius); // get all objects within radius
+            for (int i = 0; i < hitColliders.Length; i++)
+            {
+                if (hitColliders[i].gameObject != agent.gameObject) // make sure not to count myself
+                {
+                    return true;
+                }
+            }
+            return false;
 		}
 	}
 }
