@@ -51,4 +51,8 @@ public class VisionCone : MonoBehaviour
     {
         return AgentsBeingSeen;
     }
+    public bool getCanSeeTarget(GameObject target)
+    {
+        return AgentsBeingSeen.Contains(target);
+    }
 }

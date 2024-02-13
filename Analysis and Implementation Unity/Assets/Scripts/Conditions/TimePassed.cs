@@ -9,17 +9,19 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class TimePassed : ConditionTask {
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		public float Seconds = 10;
-		bool timerComplete = false;
+        public float Seconds = 10;
+        bool timerComplete = false;
         private Coroutine coroutine;
+
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit(){
             return null;
 		}
 
 		//Called whenever the condition gets enabled.
 		protected override void OnEnable() {
+            timerComplete = false;
             coroutine = StartCoroutine(WaitAndFinish(Seconds));
         }
 
