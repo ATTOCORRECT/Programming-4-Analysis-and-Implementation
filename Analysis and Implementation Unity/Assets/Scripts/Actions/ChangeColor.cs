@@ -6,12 +6,12 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.Actions
 {
 
-    public class TurnCyan : ActionTask
+    public class ChangeColor : ActionTask
     {
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
-
+        public Color color;
         ColorManager colorManager;
         protected override string OnInit()
         {
@@ -24,7 +24,7 @@ namespace NodeCanvas.Tasks.Actions
         //EndAction can be called from anywhere.
         protected override void OnExecute()
         {
-            colorManager.SetMaterial(Color.yellow);
+            colorManager.SetMaterial(color);
         }
 
         //Called once per frame while the action is active.

@@ -6,9 +6,8 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class AssignTargetToNearest : ActionTask {
-        List<GameObject> agentsWithinSearch;
-        public float maxSearchRange = 5;
+	public class AssignTargetToNearestVisible : ActionTask {
+        
         
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -20,32 +19,24 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			List<GameObject> agentsWithinSearch = new List<GameObject>(); // new list
-            Vector3 myPosition = agent.transform.position;
-            Collider[] hitColliders = Physics.OverlapSphere(myPosition, maxSearchRange); // get all objects within radius
-            for (int i = 0; i < hitColliders.Length; i++)
-            {
-                if (hitColliders[i].gameObject != agent.gameObject) // make sure not to count myself
-                {
-                    agentsWithinSearch.Add(hitColliders[i].gameObject);
-                }
-            }
+            List<GameObject> AgentsBeingSeen = agent.GetComponent<VisionCone>().getAgentsBeingSeen(); // get visible agents
 
-			//sort list
-			GameObject Nearest = agentsWithinSearch[0];
-			for (int i = 1; i < agentsWithinSearch.Count; i++)
+            //sort list for nearest
+            GameObject Nearest = AgentsBeingSeen[0];
+			for (int i = 1; i < AgentsBeingSeen.Count; i++)
 			{
 				float distance1 = (Nearest.transform.position - agent.transform.position).sqrMagnitude;
-                float distance2 = (agentsWithinSearch[i].transform.position - agent.transform.position).sqrMagnitude;
+                float distance2 = (AgentsBeingSeen[i].transform.position - agent.transform.position).sqrMagnitude;
 
                 if (distance1 > distance2)
 				{
-					Nearest = agentsWithinSearch[i];
+					Nearest = AgentsBeingSeen[i];
                 }
             }
 
 			//set nearest
-			blackboard.SetVariableValue("target", Nearest);
+			Debug.Log(Nearest);
+            blackboard.SetVariableValue("target", Nearest);
         }
 
 		//Called once per frame while the action is active.

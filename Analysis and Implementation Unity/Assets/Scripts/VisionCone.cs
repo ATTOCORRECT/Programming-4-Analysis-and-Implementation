@@ -8,6 +8,7 @@ public class VisionCone : MonoBehaviour
     public float viewDistance = 5;
     public float viewAngle = 90;
     bool canSeeAgents = false;
+    public List<GameObject> AgentsBeingSeen = new List<GameObject>();
     Collider[] hitColliders;
     void Start()
     {
@@ -17,6 +18,7 @@ public class VisionCone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AgentsBeingSeen.Clear();
         canSeeAgents = false; // reset value
         Vector3 myPosition = transform.position;
         hitColliders = Physics.OverlapSphere(myPosition, viewDistance); // get all objects within view distance
@@ -31,6 +33,7 @@ public class VisionCone : MonoBehaviour
                     Debug.DrawRay(myPosition, directionToAgent);
                     canSeeAgents = true;
                     VisionManager.Instance.AgentsBeingSeen.Add(hitColliders[i].gameObject); // add to seen objects list
+                    AgentsBeingSeen.Add(hitColliders[i].gameObject);
                 }
             }
         }
@@ -42,5 +45,10 @@ public class VisionCone : MonoBehaviour
     public bool getCanSeeAgents()
     {
         return canSeeAgents;
+    }
+
+    public List<GameObject> getAgentsBeingSeen()
+    {
+        return AgentsBeingSeen;
     }
 }
