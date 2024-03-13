@@ -4,19 +4,41 @@ using UnityEngine;
 
 public class GeckoAnimationController : MonoBehaviour
 {
-    // The target we are going to track
-    [SerializeField] Transform lookObject;
-    // A reference to the gecko's neck
+    [SerializeField] Transform target;
     [SerializeField] Transform headBone;
+    [SerializeField] float headMaxTurnAngle;
+    [SerializeField] float headTrackingSpeed;
 
-    // We will put all our animation code in LateUpdate.
-    // This allows other systems to update the environment first, 
-    // allowing the animation system to adapt to it before the frame is drawn.
     void LateUpdate()
     {
-        Vector3 towardObjectFromHead = lookObject.position - headBone.position * 1;
-        headBone.rotation = Quaternion.LookRotation(-towardObjectFromHead, transform.up);
+        HeadTracking();
 
+    }
 
+    void HeadTracking()
+    {
+        // Store the current head rotation since we will be resetting it
+        Quaternion currentLocalRotation = headBone.localRotation;
+        // Reset the head rotation so our world to local space transformation will use the head's zero rotation. 
+        headBone.localRotation = Quaternion.identity;
+
+        Vector3 targetWorldLookDir = target.position - headBone.position;
+        Vector3 targetLocalLookDir = headBone.InverseTransformDirection(targetWorldLookDir);
+
+        // Apply angle limit
+        targetLocalLookDir = Vector3.RotateTowards(
+          Vector3.forward,
+          targetLocalLookDir,
+          Mathf.Deg2Rad * headMaxTurnAngle, // Note we multiply by Mathf.Deg2Rad here to convert degrees to radians
+          0); // We don't care about the length here, so we leave it at zero
+
+        // Get the local rotation by using LookRotation on a local directional vector
+        Quaternion targetLocalRotation = Quaternion.LookRotation(targetLocalLookDir, Vector3.up);
+
+        // Apply smoothing
+        headBone.localRotation = Quaternion.Slerp(
+          currentLocalRotation,
+          targetLocalRotation,
+          1 - Mathf.Exp(-headTrackingSpeed * Time.deltaTime));
     }
 }
