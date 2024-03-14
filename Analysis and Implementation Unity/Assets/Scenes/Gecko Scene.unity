@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &374898671
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3084983710128172028, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_Name
+      value: Leopard Gecko
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326659614191613680, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 425279536}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372831956257079452, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e59f08235465e2f4ab770d6431ab9ec7, type: 3}
 --- !u!1 &425279532
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,92 +291,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &491750417
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      propertyPath: m_Name
-      value: LeopardGecko
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 491750420}
-  m_SourcePrefab: {fileID: 100100000, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
---- !u!1 &491750418 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-  m_PrefabInstance: {fileID: 491750417}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &491750419 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4997467005675348322, guid: b9164eae3f65c4d409f66f40b18d3f47, type: 3}
-  m_PrefabInstance: {fileID: 491750417}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &491750420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491750418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85476fd9056032049bb9dcca406cdd29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 425279536}
-  headBone: {fileID: 491750419}
-  headMaxTurnAngle: 60
-  headTrackingSpeed: 10
 --- !u!1 &784427805
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,4 +484,4 @@ SceneRoots:
   - {fileID: 784427808}
   - {fileID: 2044290608}
   - {fileID: 425279536}
-  - {fileID: 491750417}
+  - {fileID: 374898671}
