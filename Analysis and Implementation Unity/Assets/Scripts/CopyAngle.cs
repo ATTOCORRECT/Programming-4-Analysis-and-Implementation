@@ -28,6 +28,6 @@ public class CopyAngle : MonoBehaviour
 
         currentAngle = (targetAngle + targetAngle2 + targetAngle3 + targetAngle4) / 4;
 
-        transform.eulerAngles = new Vector3 (0, targetAngle, 0);
+        transform.eulerAngles = new Vector3 (0, currentAngle, 0);
     }
 }

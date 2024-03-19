@@ -1,0 +1,39 @@
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
+
+namespace NodeCanvas.Tasks.Conditions {
+
+	public class ArrivedAtLocation : ConditionTask {
+        
+		public float radius = 1; // distance to check gecko for
+        
+		//Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit(){
+			return null;
+		}
+
+		//Called whenever the condition gets enabled.
+		protected override void OnEnable() {
+			
+		}
+
+		//Called whenever the condition gets disabled.
+		protected override void OnDisable() {
+			
+		}
+
+		//Called once per frame while the condition is active.
+		//Return whether the condition is success or failure.
+		protected override bool OnCheck() {
+            Vector3 myPosition = agent.transform.position;
+            Collider[] hitColliders = Physics.OverlapSphere(myPosition, radius, 1<<LayerMask.NameToLayer("Gecko")); // get all Geckos (should only be one) within radius
+            if (hitColliders.Length > 0) 
+            {
+				return true;
+            }
+            return false;
+        }
+	}
+}
