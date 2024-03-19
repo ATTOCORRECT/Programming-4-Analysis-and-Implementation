@@ -11,7 +11,7 @@ public class CopyAngle : MonoBehaviour
     float currentAngle = 0;
     float targetAngle = 0;
 
-    float targetAngle2 = 0; // for smoothing
+    float targetAngle2 = 0; // For smoothing
     float targetAngle3 = 0;
     float targetAngle4 = 0;
 
@@ -23,10 +23,9 @@ public class CopyAngle : MonoBehaviour
         targetAngle2 = targetAngle;
 
         Vector3 targetAngledVector = Point2.position - Point1.position;
-        targetAngle = Vector3.SignedAngle(Vector3.back, targetAngledVector, Vector3.up);
-        Debug.Log(targetAngledVector);
+        targetAngle = Vector3.SignedAngle(Vector3.back, targetAngledVector, Vector3.up); // Get the angle, this causes jitter for some reason (impercise??)
 
-        currentAngle = (targetAngle + targetAngle2 + targetAngle3 + targetAngle4) / 4;
+        currentAngle = (targetAngle + targetAngle2 + targetAngle3 + targetAngle4) / 4; // rolling average fixes jitter (i wish there was a nicer solution)
 
         transform.eulerAngles = new Vector3 (0, currentAngle, 0);
     }

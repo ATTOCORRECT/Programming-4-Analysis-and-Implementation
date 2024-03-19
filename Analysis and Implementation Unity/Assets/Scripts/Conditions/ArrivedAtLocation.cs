@@ -31,7 +31,7 @@ namespace NodeCanvas.Tasks.Conditions {
             Collider[] hitColliders = Physics.OverlapSphere(myPosition, radius, 1<<LayerMask.NameToLayer("Gecko")); // get all Geckos (should only be one) within radius
             if (hitColliders.Length > 0) 
             {
-				return true;
+				return true; // Gecko found which means the gecko arrived
             }
             return false;
         }
