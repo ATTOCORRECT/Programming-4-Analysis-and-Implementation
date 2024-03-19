@@ -1,0 +1,4 @@
+external Packages/scripts used
+Node Canvas
+Inverse Kinematics
+Dynamic Bone
