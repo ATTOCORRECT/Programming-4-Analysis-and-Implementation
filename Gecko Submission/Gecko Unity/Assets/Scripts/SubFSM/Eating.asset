@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: Eating
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.9803922,"g":0.7803922,"b":0.0627451,"a":1.0},"_name":"Hungry","_position":{"x":507.3292,"y":242.0249},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"locationName":"Food","$type":"NodeCanvas.Tasks.Actions.GoToSpecificLocation"}]},"_color":{"r":0.9960785,"g":0.9568628,"b":0.2705882,"a":1.0},"_name":"Go
+    to Food","_position":{"x":313.805,"y":338.4149},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.8078432,"g":0.9058824,"b":0.254902,"a":1.0},"_name":"Eating
+    Food","_position":{"x":542.0,"y":421.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.EatFood"},{"$type":"NodeCanvas.Tasks.Actions.ChooseRandomTargetLocation"}]},"_color":{"r":0.5607843,"g":0.8196079,"b":0.3098039,"a":1.0},"_name":"Finished
+    Eating","_position":{"x":346.4758,"y":498.5913},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.GoToTargetLocation"}]},"_color":{"r":0.9411765,"g":0.3411765,"b":0.09803922,"a":1.0},"_name":"Go
+    to Random Location","_position":{"x":593.9288,"y":607.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.9490197,"g":0.2784314,"b":0.1490196,"a":1.0},"_name":"EXIT","_position":{"x":441.9164,"y":689.6242},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"}],"connections":[{"_condition":{"Seconds":1.0,"$type":"NodeCanvas.Tasks.Conditions.TimePassed"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.ArrivedAtLocation"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"Seconds":3.0,"$type":"NodeCanvas.Tasks.Conditions.TimePassed"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"Seconds":1.0,"$type":"NodeCanvas.Tasks.Conditions.TimePassed"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _objectReferences: []
+  _graphSource:
+    _version: 3.29
+    _category: 
+    _comments: 
+    _translation: {x: -115, y: -60}
+    _zoomFactor: 0.7175188
+  _haltSerialization: 0
+  _externalSerializationFile: {fileID: 0}
