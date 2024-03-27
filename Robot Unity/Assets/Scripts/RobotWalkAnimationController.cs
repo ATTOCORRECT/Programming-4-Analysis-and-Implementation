@@ -19,9 +19,9 @@ public class RobotWalkAnimationController : MonoBehaviour
     [SerializeField] Transform moveTarget;
     [SerializeField] Transform lookTarget;
 
-    [SerializeField] Transform headBone;
-    [SerializeField] float headMaxTurnAngle;
-    [SerializeField] float headTrackingSpeed;
+    //[SerializeField] Transform headBone;
+    //[SerializeField] float headMaxTurnAngle;
+    //[SerializeField] float headTrackingSpeed;
 
     // Legs
     [SerializeField] LegStepper frontLeftLegStepper;
@@ -41,7 +41,7 @@ public class RobotWalkAnimationController : MonoBehaviour
     void LateUpdate()
     {
         RootMotionUpdate();
-        HeadTracking();
+        //HeadTracking();
     }
 
     private void FixedUpdate()
@@ -49,7 +49,7 @@ public class RobotWalkAnimationController : MonoBehaviour
         positionDynamics.IterateDynamics();
     }
 
-    void HeadTracking()
+/*    void HeadTracking()
     {
         // Store the current head rotation since we will be resetting it
         Quaternion currentLocalRotation = headBone.localRotation;
@@ -74,7 +74,7 @@ public class RobotWalkAnimationController : MonoBehaviour
           currentLocalRotation,
           targetLocalRotation,
           1 - Mathf.Exp(-headTrackingSpeed * Time.deltaTime));
-    }
+    }*/
 
     void RootMotionUpdate()
     {
