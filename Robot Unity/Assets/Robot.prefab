@@ -250,11 +250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4e31bba9bf92841b37b6b37ddcd5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 400
+  turnSpeed: 300
   turnAcceleration: 10
   maxAngToTarget: 1
   moveTarget: {fileID: 4023521851233212479}
   lookTarget: {fileID: 4793905368677327111}
+  headBone: {fileID: 3976788813488200372}
+  headMaxTurnAngle: 20
+  headTrackingSpeed: 500
   frontLeftLegStepper: {fileID: 7682739740769303784}
   frontRightLegStepper: {fileID: 6077028747133103399}
   backLeftLegStepper: {fileID: 2185461925648764707}
@@ -688,11 +691,11 @@ Transform:
   m_GameObject: {fileID: 1556105483323688076}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0.25, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1639316353913286451}
+  m_Father: {fileID: 4023521851233212479}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592120254542826039
 GameObject:
@@ -719,11 +722,10 @@ Transform:
   m_GameObject: {fileID: 1592120254542826039}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8356073084958969799}
   - {fileID: 4783741915688586689}
   - {fileID: 3976788813488200372}
   - {fileID: 6321241343397311446}
@@ -866,8 +868,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeTransform: {fileID: 4044833092658494458}
   wantStepAtDistance: 0.1
-  moveDuration: 0.07
-  stepOvershootFraction: 8
+  moveDuration: 0.075
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &2313826519206868489
 GameObject:
@@ -1201,114 +1203,8 @@ Transform:
   - {fileID: 7458334010454139487}
   - {fileID: 5481013213737219665}
   - {fileID: 4023521851233212479}
-  - {fileID: 4793905368677327111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4895392421488027526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1310245617273193940}
-  - component: {fileID: 6209445479871643223}
-  - component: {fileID: 3046508834789066077}
-  - component: {fileID: 5991549135298730948}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1310245617273193940
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4895392421488027526}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7458334010454139487}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6209445479871643223
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4895392421488027526}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3046508834789066077
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4895392421488027526}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5991549135298730948
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4895392421488027526}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5270981984304580883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,8 +1334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeTransform: {fileID: 7950556165192049608}
   wantStepAtDistance: 0.1
-  moveDuration: 0.07
-  stepOvershootFraction: 8
+  moveDuration: 0.075
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &5610312776044764366
 GameObject:
@@ -1474,6 +1370,7 @@ Transform:
   - {fileID: 3556670562955620604}
   - {fileID: 8422564858143532660}
   - {fileID: 7603850592802853977}
+  - {fileID: 8356073084958969799}
   m_Father: {fileID: 5184329560669807831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5801131320797355821
@@ -1601,7 +1498,7 @@ GameObject:
   - component: {fileID: 8356073084958969799}
   - component: {fileID: 8650869360177020028}
   - component: {fileID: 970611581255071944}
-  - component: {fileID: 4282370898794956841}
+  - component: {fileID: 6796567204363205101}
   m_Layer: 0
   m_Name: Antenna
   m_TagString: Untagged
@@ -1618,12 +1515,12 @@ Transform:
   m_GameObject: {fileID: 5930127797989316828}
   serializedVersion: 2
   m_LocalRotation: {x: -0.17298739, y: 0.08583165, z: 0.015134436, w: 0.98106027}
-  m_LocalPosition: {x: -0.09375, y: 0.3125, z: -0.09375}
+  m_LocalPosition: {x: -0.09375, y: 0.1875, z: -0.09375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4133622533698445641}
-  m_Father: {fileID: 5184329560669807831}
+  m_Father: {fileID: 3976788813488200372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8650869360177020028
 MeshFilter:
@@ -1675,7 +1572,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4282370898794956841
+--- !u!114 &6796567204363205101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1793,7 +1690,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4793905368677327111}
   m_Father: {fileID: 1639316353913286451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6122330266418581717
@@ -2392,8 +2290,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeTransform: {fileID: 2505378247511384884}
   wantStepAtDistance: 0.1
-  moveDuration: 0.07
-  stepOvershootFraction: 8
+  moveDuration: 0.075
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &7296208368739079016
 GameObject:
@@ -2424,8 +2322,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1310245617273193940}
+  m_Children: []
   m_Father: {fileID: 1639316353913286451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5966447799790074379
@@ -2844,8 +2741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeTransform: {fileID: 7077976505018952870}
   wantStepAtDistance: 0.1
-  moveDuration: 0.07
-  stepOvershootFraction: 8
+  moveDuration: 0.075
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &8671830737694387586
 GameObject:
