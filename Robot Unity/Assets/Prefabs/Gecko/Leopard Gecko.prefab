@@ -337,7 +337,7 @@ MonoBehaviour:
   homeTransform: {fileID: 7067650546806251346}
   wantStepAtDistance: 0.15
   moveDuration: 0.15
-  stepOvershootFraction: 5
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &470810522843718899
 GameObject:
@@ -469,7 +469,7 @@ MonoBehaviour:
   homeTransform: {fileID: 1580061602772516602}
   wantStepAtDistance: 0.15
   moveDuration: 0.15
-  stepOvershootFraction: 5
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &801418388982534848
 GameObject:
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"_name":"IDLE","_position":{"x":258.0,"y":231.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_nestedFSM":{"_value":1},"_name":"Roam","_position":{"x":429.9102,"y":352.8204},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_nestedFSM":{"_value":2},"_name":"Sleeping","_position":{"x":90.0,"y":352.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_nestedFSM":{"_value":3},"_name":"Eating","_position":{"x":89.11606,"y":61.37642},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"3"}],"connections":[{"_condition":{"Seconds":15.0,"$type":"NodeCanvas.Tasks.Conditions.TimePassed"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.SunAboveAngle"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"objectName":"Food","$type":"NodeCanvas.Tasks.Conditions.DoesObjectExist"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"_name":"IDLE","_position":{"x":260.0,"y":240.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_nestedFSM":{"_value":1},"_name":"Roam","_position":{"x":420.0,"y":360.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_nestedFSM":{"_value":2},"_name":"Sleeping","_position":{"x":80.0,"y":360.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_nestedFSM":{"_value":3},"_name":"Eating","_position":{"x":80.0,"y":60.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"3"}],"connections":[{"_condition":{"Seconds":15.0,"$type":"NodeCanvas.Tasks.Conditions.TimePassed"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.SunAboveAngle"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"objectName":"Food","$type":"NodeCanvas.Tasks.Conditions.DoesObjectExist"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: 0681a92c93c8965449fb2e130a7283b0, type: 2}
@@ -1332,7 +1332,7 @@ MonoBehaviour:
     _version: 3.29
     _category: 
     _comments: 
-    _translation: {x: 618, y: 297}
+    _translation: {x: 130, y: 136}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -1628,7 +1628,7 @@ MonoBehaviour:
   homeTransform: {fileID: 3903792252616703398}
   wantStepAtDistance: 0.15
   moveDuration: 0.15
-  stepOvershootFraction: 5
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &3788030403892435891
 GameObject:
@@ -2915,7 +2915,7 @@ MonoBehaviour:
   homeTransform: {fileID: 3190836326532382604}
   wantStepAtDistance: 0.15
   moveDuration: 0.15
-  stepOvershootFraction: 5
+  stepOvershootFraction: 0.5
   Moving: 0
 --- !u!1 &8323388378500818034
 GameObject:

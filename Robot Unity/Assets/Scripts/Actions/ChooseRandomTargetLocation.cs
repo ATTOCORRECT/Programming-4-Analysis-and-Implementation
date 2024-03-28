@@ -19,7 +19,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 			// if i wanted to check for validity and/or obstacle avoidance id probably do it here
 
-			blackboard.SetVariableValue("targetLocation", randomLocation); // set the target location in the blackboard
+			blackboard.SetVariableValue("TargetLocation", randomLocation); // set the target location in the blackboard
 			EndAction(true);
 		}
 	}

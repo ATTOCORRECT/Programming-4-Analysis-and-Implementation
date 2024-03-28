@@ -80,40 +80,45 @@ public class RobotWalkAnimationController : MonoBehaviour
     {
         // Get the direction toward our target
         Vector3 towardTarget = lookTarget.position - transform.position;
-        // Vector toward target on the local XZ plane
-        Vector3 towardTargetProjected = Vector3.ProjectOnPlane(towardTarget, transform.up);
-        // Get the angle from the gecko's forward direction to the direction toward toward our target
-        // Here we get the signed angle around the up vector so we know which direction to turn in
-        float angToTarget = Vector3.SignedAngle(transform.forward, towardTargetProjected, transform.up);
 
-        float targetAngularVelocity = 0;
-
-        // If we are within the max angle (i.e. approximately facing the target)
-        // leave the target angular velocity at zero
-        if (Mathf.Abs(angToTarget) > maxAngToTarget)
+        if (towardTarget.sqrMagnitude > 1) // Dont rotate if were too close
         {
-            // Angles in Unity are clockwise, so a positive angle here means to our right
-            if (angToTarget > 0)
+            // Vector toward target on the local XZ plane
+            Vector3 towardTargetProjected = Vector3.ProjectOnPlane(towardTarget, transform.up);
+            // Get the angle from the gecko's forward direction to the direction toward toward our target
+            // Here we get the signed angle around the up vector so we know which direction to turn in
+            float angToTarget = Vector3.SignedAngle(transform.forward, towardTargetProjected, transform.up);
+
+            float targetAngularVelocity = 0;
+
+            // If we are within the max angle (i.e. approximately facing the target)
+            // leave the target angular velocity at zero
+            if (Mathf.Abs(angToTarget) > maxAngToTarget)
             {
-                targetAngularVelocity = turnSpeed;
+                // Angles in Unity are clockwise, so a positive angle here means to our right
+                if (angToTarget > 0)
+                {
+                    targetAngularVelocity = turnSpeed;
+                }
+                // Invert angular speed if target is to our left
+                else
+                {
+                    targetAngularVelocity = -turnSpeed;
+                }
             }
-            // Invert angular speed if target is to our left
-            else
-            {
-                targetAngularVelocity = -turnSpeed;
-            }
+
+            // Use our smoothing function to gradually change the velocity
+            currentAngularVelocity = Mathf.Lerp(
+              currentAngularVelocity,
+              targetAngularVelocity,
+              1 - Mathf.Exp(-turnAcceleration * Time.deltaTime)
+            );
+
+            // Rotate the transform around the Y axis in world space, 
+            // making sure to multiply by delta time to get a consistent angular velocity
+            transform.Rotate(0, Time.deltaTime * currentAngularVelocity, 0, Space.World);
         }
 
-        // Use our smoothing function to gradually change the velocity
-        currentAngularVelocity = Mathf.Lerp(
-          currentAngularVelocity,
-          targetAngularVelocity,
-          1 - Mathf.Exp(-turnAcceleration * Time.deltaTime)
-        );
-
-        // Rotate the transform around the Y axis in world space, 
-        // making sure to multiply by delta time to get a consistent angular velocity
-        transform.Rotate(0, Time.deltaTime * currentAngularVelocity, 0, Space.World);
 
 
 

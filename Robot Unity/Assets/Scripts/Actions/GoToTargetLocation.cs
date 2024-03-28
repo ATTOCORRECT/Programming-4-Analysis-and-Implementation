@@ -16,7 +16,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			Vector3 targetLocation = blackboard.GetVariableValue<Vector3>("targetLocation"); // Grab target location from the blackboard
+			Vector3 targetLocation = blackboard.GetVariableValue<Vector3>("TargetLocation"); // Grab target location from the blackboard
 			agent.transform.localPosition = targetLocation; // Set position for GeckoAnimationController to follow
             EndAction(true);
 		}

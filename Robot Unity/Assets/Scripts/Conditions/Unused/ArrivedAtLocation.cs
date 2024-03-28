@@ -5,10 +5,9 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.Conditions {
 
 	public class ArrivedAtLocation : ConditionTask {
-        
-		public float radius = 1; // distance to check gecko for
-        
-		//Use for initialization. This is called only once in the lifetime of the task.
+
+        [SerializeField] float radius = 1; // distance to check for
+        //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit(){
 			return null;
