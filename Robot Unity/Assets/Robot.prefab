@@ -255,9 +255,6 @@ MonoBehaviour:
   maxAngToTarget: 1
   moveTarget: {fileID: 4023521851233212479}
   lookTarget: {fileID: 4793905368677327111}
-  headBone: {fileID: 3976788813488200372}
-  headMaxTurnAngle: 20
-  headTrackingSpeed: 500
   frontLeftLegStepper: {fileID: 7682739740769303784}
   frontRightLegStepper: {fileID: 6077028747133103399}
   backLeftLegStepper: {fileID: 2185461925648764707}
@@ -278,7 +275,7 @@ MonoBehaviour:
   f: 2
   z: 0.5
   r: 1
-  m: 0.05
+  m: 0.04
 --- !u!114 &2429888291444936725
 MonoBehaviour:
   m_ObjectHideFlags: 0
