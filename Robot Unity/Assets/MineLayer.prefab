@@ -79,11 +79,13 @@ MonoBehaviour:
   _serializedBlackboard: '{"_variables":{"RobotRoot":{"_value":1,"_name":"RobotRoot","_id":"004bfc34-c31e-4eac-9a30-73b6d033ece2","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"MoveTarget":{"_value":2,"_name":"MoveTarget","_id":"42671860-8abb-4d7a-94e0-3c733829887a","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"TargetLocation":{"_name":"TargetLocation","_id":"115acf1c-dce4-481f-a273-b545265d6df7","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"MinePrefab":{"_value":3,"_name":"MinePrefab","_id":"866b134a-1375-4565-816d-a07765744ee6","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 5724194434141048868}
   - {fileID: 8542473750890269643}
+  - {fileID: 567891539548350260, guid: 6a33b6de2cd1f5c49a113678a6551204, type: 3}
   _serializedVariables:
   - _json: '{"_value":1,"_name":"RobotRoot","_id":"004bfc34-c31e-4eac-9a30-73b6d033ece2","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
@@ -98,6 +100,11 @@ MonoBehaviour:
   - _json: '{"_name":"TargetLocation","_id":"115acf1c-dce4-481f-a273-b545265d6df7","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
+  - _json: '{"_value":1,"_name":"MinePrefab","_id":"866b134a-1375-4565-816d-a07765744ee6","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 567891539548350260, guid: 6a33b6de2cd1f5c49a113678a6551204, type: 3}
 --- !u!1001 &4709249343132980212
 PrefabInstance:
   m_ObjectHideFlags: 0
