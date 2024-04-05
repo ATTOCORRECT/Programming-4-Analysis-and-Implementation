@@ -443,8 +443,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115394695}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22975291, y: -1e-45, z: 0, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 3.1875, z: -3}
+  m_LocalRotation: {x: 0.2756825, y: -1e-45, z: 0, w: 0.96124876}
+  m_LocalPosition: {x: 0, y: 4.1875, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -460,7 +460,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3847506442523316637, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3847506442523316637, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3847506442523316637, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 3847506442523316637, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -498,6 +498,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7839336707542645686, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
+      propertyPath: _serializedBlackboard
+      value: '{"_variables":{"RobotRoot":{"_value":1,"_name":"RobotRoot","_id":"ddc1f9cf-166e-43c0-9257-eb1b59b01e68","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"MoveTarget":{"_value":2,"_name":"MoveTarget","_id":"0ca3f67d-b05d-463d-8a0a-fe194d6ebca0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"TargetLocaiton":{"_name":"TargetLocaiton","_id":"1cd58cae-4980-4989-8a71-2644524085b2","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PlayerRoot":{"_value":3,"_name":"PlayerRoot","_id":"9c649410-6fcb-4161-9327-7a839fb3b4bc","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839336707542645686, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
+      propertyPath: _objectReferences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839336707542645686, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
+      propertyPath: _objectReferences.Array.data[3]
+      value: 
+      objectReference: {fileID: 996681083276518145}
+    - target: {fileID: 7839336707542645686, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
+      propertyPath: _serializedVariables.Array.data[3]._json
+      value: '{"_value":1,"_name":"PlayerRoot","_id":"9c649410-6fcb-4161-9327-7a839fb3b4bc","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839336707542645686, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
+      propertyPath: _serializedVariables.Array.data[3]._references.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839336707542645686, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
+      propertyPath: _serializedVariables.Array.data[3]._references.Array.data[1]
+      value: 
+      objectReference: {fileID: 996681083276518145}
     - target: {fileID: 8711566983803010084, guid: 1aa6e4e20f9e0d148afcb4c4c14dedcf, type: 3}
       propertyPath: m_Name
       value: MineDetector
@@ -554,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 3, z: -3}
+  m_FollowOffset: {x: 0, y: 4, z: -4}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -671,8 +700,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453606849}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22975291, y: -1e-45, z: -0, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 3.1875, z: -3}
+  m_LocalRotation: {x: 0.2756825, y: -1e-45, z: -0, w: 0.96124876}
+  m_LocalPosition: {x: 0, y: 4.1875, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -780,8 +809,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -864,7 +893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912893687731221793, guid: fa26c31c630b29641a2f9a40ce41eea7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 4912893687731221793, guid: fa26c31c630b29641a2f9a40ce41eea7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -899,6 +928,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa26c31c630b29641a2f9a40ce41eea7, type: 3}
+--- !u!4 &996681083276518145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 47097383217683167, guid: fa26c31c630b29641a2f9a40ce41eea7, type: 3}
+  m_PrefabInstance: {fileID: 996681083276518144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

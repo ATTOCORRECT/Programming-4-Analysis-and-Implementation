@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _serializedGraph: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":1080.0,"y":660.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"0"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.ChooseRandomTargetLocation"},"_tag":"","_position":{"x":660.0,"y":800.0},"_comment":"Choose
     a new location to go to and place a mine at","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"1"},{"_position":{"x":1020.0,"y":800.0},"$type":"NodeCanvas.BehaviourTrees.Inverter","$id":"2"},{"_condition":{"distance":0.25,"$type":"NodeCanvas.Tasks.Conditions.AreWeThereYet"},"_tag":"","_position":{"x":900.0,"y":880.0},"_comment":"Interupt
-    once \nweve arrived","$type":"NodeCanvas.BehaviourTrees.Interruptor","$id":"3"},{"_position":{"x":1020.0,"y":980.0},"$type":"NodeCanvas.BehaviourTrees.Inverter","$id":"4"},{"timeout":{"_value":5.0},"_position":{"x":900.0,"y":1060.0},"_comment":"Interupt
+    once \nweve arrived","$type":"NodeCanvas.BehaviourTrees.Interruptor","$id":"3"},{"_position":{"x":1020.0,"y":980.0},"$type":"NodeCanvas.BehaviourTrees.Inverter","$id":"4"},{"timeout":{"_value":10.0},"_position":{"x":900.0,"y":1060.0},"_comment":"Interupt
     if were \ntaking too long","$type":"NodeCanvas.BehaviourTrees.Timeout","$id":"5"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.GoToTargetLocationML"},"_tag":"","_position":{"x":980.0,"y":1160.0},"_comment":"Go
     to our target location while avoiding mines","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_condition":{"Seconds":1.0,"$type":"NodeCanvas.Tasks.Conditions.TimePassed"},"_position":{"x":1140.0,"y":800.0},"_comment":"Wait
     for 5 seconds \nbefore moving again","$type":"NodeCanvas.BehaviourTrees.WaitUntil","$id":"7"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.LayNewMine"},"_tag":"","_position":{"x":1380.0,"y":800.0},"_comment":"Lay
@@ -24,7 +24,7 @@ MonoBehaviour:
     _version: 3.29
     _category: 
     _comments: 
-    _translation: {x: -116, y: -444}
+    _translation: {x: -153, y: -434}
     _zoomFactor: 1
   _haltSerialization: 0
   _externalSerializationFile: {fileID: 0}

@@ -81,7 +81,7 @@ public class RobotWalkAnimationController : MonoBehaviour
         // Get the direction toward our target
         Vector3 towardTarget = lookTarget.position - transform.position;
 
-        if (towardTarget.sqrMagnitude > 1) // Dont rotate if were too close
+        if (towardTarget.sqrMagnitude > 0.1f) // Dont rotate if were too close
         {
             // Vector toward target on the local XZ plane
             Vector3 towardTargetProjected = Vector3.ProjectOnPlane(towardTarget, transform.up);

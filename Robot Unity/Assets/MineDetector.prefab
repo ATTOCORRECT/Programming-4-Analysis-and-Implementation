@@ -76,9 +76,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{}}'
-  _objectReferences: []
-  _serializedVariables: []
+  _serializedBlackboard: '{"_variables":{"RobotRoot":{"_value":1,"_name":"RobotRoot","_id":"ddc1f9cf-166e-43c0-9257-eb1b59b01e68","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"MoveTarget":{"_value":2,"_name":"MoveTarget","_id":"0ca3f67d-b05d-463d-8a0a-fe194d6ebca0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"TargetLocaiton":{"_name":"TargetLocaiton","_id":"1cd58cae-4980-4989-8a71-2644524085b2","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PlayerRoot":{"_name":"PlayerRoot","_id":"9c649410-6fcb-4161-9327-7a839fb3b4bc","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 4017428054529539635}
+  - {fileID: 1025799924060317148}
+  _serializedVariables:
+  - _json: '{"_value":1,"_name":"RobotRoot","_id":"ddc1f9cf-166e-43c0-9257-eb1b59b01e68","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 4017428054529539635}
+  - _json: '{"_value":1,"_name":"MoveTarget","_id":"0ca3f67d-b05d-463d-8a0a-fe194d6ebca0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1025799924060317148}
+  - _json: '{"_name":"TargetLocaiton","_id":"1cd58cae-4980-4989-8a71-2644524085b2","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_name":"PlayerRoot","_id":"9c649410-6fcb-4161-9327-7a839fb3b4bc","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
 --- !u!1001 &4173205552794172899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,8 +235,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ea72783b6c2e549addb8f529e44022, type: 3}
+--- !u!4 &1025799924060317148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4023521851233212479, guid: e1ea72783b6c2e549addb8f529e44022, type: 3}
+  m_PrefabInstance: {fileID: 4173205552794172899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3398583703214396112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1639316353913286451, guid: e1ea72783b6c2e549addb8f529e44022, type: 3}
+  m_PrefabInstance: {fileID: 4173205552794172899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4017428054529539635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1020894146309653456, guid: e1ea72783b6c2e549addb8f529e44022, type: 3}
   m_PrefabInstance: {fileID: 4173205552794172899}
   m_PrefabAsset: {fileID: 0}
