@@ -18,23 +18,29 @@ namespace NodeCanvas.Tasks.Actions {
             Vector3 localTargetLocation = targetLocation - robotTransform.position; // Target location local to the root
             Vector3 towardsTargetLocation = Vector3.ClampMagnitude(localTargetLocation, 1); // Clamped ector towards the target
 
-            Collider[] hitColliders = Physics.OverlapSphere(robotTransform.position, radius, 1 << LayerMask.NameToLayer("PlayerRobot")); // Get all Mines within radius
-            
-            Vector3 playerForce = Vector3.zero;
+            Vector3 totalRepulsionForce = Vector3.zero;
+            Collider[] hitColliders = Physics.OverlapSphere(robotTransform.position, radius, 1 << LayerMask.NameToLayer("Robot")); // Get all Robots within radius
 
-            if (hitColliders.Length > 0 )
+            for (int i = 0; i < hitColliders.Length; i++)
             {
-                Vector3 playerPosition = hitColliders[0].transform.position; // Get player position (there should only be one)
-                Vector3 displacementToPlayer = playerPosition - robotTransform.position; // Get Displacement
-                float scale = 1f; // Strength of the repulsion force
+                if (hitColliders[i].gameObject != agent.gameObject) // Make sure not to count myself
+                {
+                    Vector3 ObjectPosition = hitColliders[i].transform.position; // Get object position
+                    Vector3 displacementToObject = ObjectPosition - robotTransform.position; // Get Displacement
+                    float scale = 0.5f; // Strength of the repulsion force
 
-                if (displacementToPlayer.sqrMagnitude != 0) // check to make sure its not zero to avoid an error
-                { playerForce = -displacementToPlayer.normalized * scale * 1 / displacementToPlayer.sqrMagnitude; }  // Calculate the force away from the player
-                else
-                { playerForce = Vector3.zero; }
+                    Vector3 repulsionForce;
+
+                    if (displacementToObject.sqrMagnitude != 0) // check to make sure its not zero to avoid an error
+                    { repulsionForce = -displacementToObject.normalized * scale * 1 / displacementToObject.sqrMagnitude; }  // Calculate the force away from the object
+                    else
+                    { repulsionForce = Vector3.zero; }
+
+                    totalRepulsionForce += repulsionForce; // Add to the total force from all mines
+                }
             }
 
-            towardsTargetLocation = Vector3.ClampMagnitude(towardsTargetLocation + playerForce, 1); // Add mine force to the steering Vector making sure to clamp the magnitude again
+            towardsTargetLocation = Vector3.ClampMagnitude(towardsTargetLocation + totalRepulsionForce, 1); // Add mine force to the steering Vector making sure to clamp the magnitude again
 
             targetTransform.position = robotTransform.position + towardsTargetLocation; // Update target position
 
